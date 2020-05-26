@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1E0535;
+  font-size: 2rem;
+
+
+}
+body, .quote-input {
+  font-family: cursive;
+}
+.container {
+  background-color: #d2fc17;
+  padding: 1rem;
+  border-radius: .5rem;
+  width: 900px;
+  max-width: 90%;
+  -webkit-box-shadow: 4px 4px 5px 12px rgba(255,255,255,1);
+  -moz-box-shadow: 4px 4px 5px 12px rgba(255,255,255,1);
+  box-shadow: 4px 4px 5px 12px rgba(255,255,255,1);
+  border: 4px solid black;
+
+}
+.timer {
+  position: absolute;
+  top: 25px;
+  font-size: 3rem;
+  color: #d2fc17;
+  font-weight: bold;
+}
+.quote-display {
+  margin-bottom: 1rem;
+  -moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+
+}
+.quote-input {
+  background-color: transparent;
+  border: 3px solid olive;
+  outline: none;
+  width: 100%;
+  height: 8rem;
+  margin: auto;
+  resize: none;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+}
+.quote-input:focus {
+  border-color: black;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+.instruct {
+  display: flex;
+  position: absolute;
+  top: 9rem;
+  color:white;
+  max width: 90%;
+  font-weight: bold;
+  font-size: 2rem;
+  vertical-align: bottom;
+line-height: 50px;
+  -webkit-text-stroke: 0.5px black
+}
+#wpm {
+  font-size: 3rem
+}
+#instruction {
+  color: white;
+  position: absolute;
+  display: flex;
+  top: 1rem;
+  left: 2rem;
+  font-size: 2rem;
+  -webkit-text-stroke: 0.5px black
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 1000px
+  }
+  #banner {
+    display: none
+  }
+  #instruction {
+    font-size: 1.5rem
+  }
+}
+#banner {
+  height: 100vh;
+  width: 80px;
+  background-color: #ff3479;
+  position: absolute;
+
+  right: 4rem;
+
+
+  box-shadow: 6px 2px 5px 1px rgba(255,255,255,1)
+
+}
+
+#bannertext {
+
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space:nowrap;
+  text-align: center;
+  width: 100%;
+}
+
+#playagain {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 2em;
+  padding: 20px;
+  background-color: lime;
+  border-radius: 20%;
+  border: 4px solid black;
+  font-size: 1.5em;
+  display: none;
+  box-shadow: 0 0 5px white;
+}
+
+@media only screen and (max-width: 1400px) {
+
+  #banner {
+    display: none
+  }
+}
+
+@media only screen and (max-height: 800px) {
+
+#playagain{
+  padding: 10px;
+  bottom: 20px;
+}
+.instruct {
+  top: 5rem
+}
+#timer {
+  top: 0
+}
+#instruction {
+  font-size: 1.5rem
+}
+}
