@@ -15,7 +15,7 @@ var playagainbutton = document.getElementById("playagain")
 
 function fetchAPI() { //Náhodný citát od API
 
-  return fetch('http://api.quotable.io/random')
+  return fetch('https://api.quotable.io/random')
   .then(resp => resp.json()) //json
   .then(data => data.content) //citát
 
@@ -74,8 +74,8 @@ function getTimerTime() { //Pomáhá určit skutečný čas
 function timeIsOver() {
   characterCount = characterCount.concat(arrayValue)
   timerInterval = 0;
-  timerElement.textContent = characterCount.length + " " + "characters per minute"
-
+  timerElement.textContent = "Improve Yourself!"
+  document.getElementById("instruct").textContent += "(" + characterCount.length + " " + "characters)"
 quoteInputElement.style.border = "4px solid black"
 quoteInputElement.disabled = true
 }
